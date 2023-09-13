@@ -268,8 +268,8 @@ def test(x_test, y_test, model, weights):
 if __name__ == '__main__':
     w_path2 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201.h5'
     w_path1 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152.h5'
-    # w_path22 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201double3_ohtsnew.h5'
-    # w_path11 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152double3_ohts.h5'
+    w_path22 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201double3_ohtsnew.h5'
+    w_path11 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152double3_ohts.h5'
     model_path = '/prj0129/mil4012/glaucoma/weights/glaucoma_MultiNet1sp_5.h5'
 #     w_path2 = 'glaucoma_DenseNet201LAG_5.h5'
 #     w_path1 = 'glaucoma_ResNet152LAG_5.h5'
@@ -313,7 +313,7 @@ if __name__ == '__main__':
     learning_rate = 5*1e-5
     epochs = 15
 
-    weights_path = '/prj0129/mil4012/glaucoma/weights/DenseNet201conv_ohts_sosiamese_pair_au_cos_ce_5year_w55.h5'
+    weights_path = '/prj0129/mil4012/glaucoma/weights/DenseNet201conv_ohts_sosiamese_pair_au_cos_ce_5year_w55demon.h5'
 
     model.compile(optimizer=Adam(lr=learning_rate), loss=weighted_binary_crossentropy)   
     
@@ -355,9 +355,6 @@ if __name__ == '__main__':
 #     val_images = val_images[1]
 #     test_images = test_images[1]
 
-    test_images_vf, test_labels_vf = load_data_vf(x_size,y_size,data_path=os.path.join(path,'image_crop2/'),label_path=os.path.join(path,'lab_new.csv'),vf_path=os.path.join(path,'patient_vf1.csv'),
-                                                                                                                          validation_name=validation_name,test_name=test_name)
-
     
     train_generator, train_labels = DataGenerator_seires_siamese(x_size,y_size,data_path=os.path.join(path,'image_crop2/'),label_path=os.path.join(path,'lab_seriesbew.csv'),train_normal=train_normal,train_glaucoma=train_glaucoma)
 #     train_generator = train_generator[1]
@@ -370,7 +367,6 @@ if __name__ == '__main__':
     np.savetxt('test_labels.txt', np.reshape(test_labels,(len(test_labels),)))
 #     test_labels_s = test_labels_s.astype(np.float)
 #     test_labels_un = test_labels_un.astype(np.float)
-    test_labels_vf = test_labels_vf.astype(np.float)
     print('the shape of training image:', np.shape(train_generator))
     print('the number of positive pair of training data:', len(np.argwhere(train_labels==1)))
     print('the number of positive pair of test data:', len(np.argwhere(test_labels==1)))
