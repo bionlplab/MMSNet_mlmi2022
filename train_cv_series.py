@@ -268,8 +268,8 @@ def test(x_test, y_test, model, weights):
 if __name__ == '__main__':
     w_path2 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201.h5'
     w_path1 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152.h5'
-    w_path22 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201double3_ohtsnew.h5'
-    w_path11 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152double3_ohts.h5'
+    # w_path22 = '/prj0129/mil4012/glaucoma/weights/glaucoma_DenseNet201double3_ohtsnew.h5'
+    # w_path11 = '/prj0129/mil4012/glaucoma/weights/glaucoma_ResNet152double3_ohts.h5'
     model_path = '/prj0129/mil4012/glaucoma/weights/glaucoma_MultiNet1sp_5.h5'
 #     w_path2 = 'glaucoma_DenseNet201LAG_5.h5'
 #     w_path1 = 'glaucoma_ResNet152LAG_5.h5'
