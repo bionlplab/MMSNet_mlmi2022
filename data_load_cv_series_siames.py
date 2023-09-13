@@ -5,7 +5,7 @@ import cv2
 import copy
 from skimage.transform import resize
 import pandas as pd
-def load_data_series_siamese(x_size,y_size,data_path,label_path,image_s_path,uncentain_path,validation_name,test_name):
+def load_data_series_siamese(x_size,y_size,data_path,label_path,validation_name,test_name):
 
     tmp = np.loadtxt(label_path, dtype=np.str, delimiter=",")
     # delete one image because we don't have the jpg image, 8252 is the position of this item and 1 is related to the title
