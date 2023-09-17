@@ -301,7 +301,7 @@ if __name__ == '__main__':
  # flag = 1: euclidean distance, flag=0: cosin
 #     model = ensemble_resden_siamese_contrastive(model_path,w_path1,w_path2,img_size=(224, 224, 3), model_input=Input((224, 224, 3)), dropout=False, flag = 0)
 # flag = 0: siamese + conv + side output + cos; flag =2: siamese +cov +cos
-    model = ensemble_resden_siamese_contra3(model_path,w_path1,w_path2,img_size=(224, 224, 3), model_input=Input((224, 224, 3)), dropout=False, flag = 0)
+    model = ensemble_resden_siamese_contra3(w_path2,img_size=(224, 224, 3), model_input=Input((224, 224, 3)), dropout=False, flag = 0)
 # flag = 1: euclidean distance, flag=0: cosin
 #     model =ensemble_resden_siamese_contrastive_so(model_path,w_path1,w_path2,img_size=(224, 224, 3), model_input=Input((224, 224, 3)), dropout=False, flag = 0)   
    # model = ensemble_resden1(w_path1,w_path2,img_size=(224, 224, 3), model_input=Input((224, 224, 3)),dropout=False,flag=1)
