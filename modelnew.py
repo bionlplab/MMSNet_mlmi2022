@@ -1036,7 +1036,7 @@ def merge_generate(x1,x2, size):
     
 
 #pretrained weight: ohts, side-output, each side-output is the same as siamese2, add contrast (ensemble_resden_siamese_3 add a contrasive loss)
-def ensemble_resden_siamese_contra3(model_path,w_path1,w_path2,img_size,model_input, dropout=False, flag = 1):
+def ensemble_resden_siamese_contra3(w_path2,img_size,model_input, dropout=False, flag = 1):
     input_l = Input(img_size)
     input_r = Input(img_size)
     if flag == 0 :# siamese + side output + conv  + cos
