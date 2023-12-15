@@ -27,7 +27,7 @@ python train_cv_series.py
 
 ### Reference
 
-
+Lin M, Liu L, Gorden M, Kass M, Tassel SV, Wang F, Peng Y. Multi-scale Multi-structure Siamese Network (MMSNet) for Primary Open-Angle Glaucoma Prediction. In International Workshop on Machine Learning in Medical Imaging (MLMI). 2022 Sep;13583:436-445. doi: 10.1007/978-3-031-21014-3_45. Epub 2022 Dec 16. PMID: 36656619; PMCID: PMC9844668.
 
 ### Acknowledgment
 
